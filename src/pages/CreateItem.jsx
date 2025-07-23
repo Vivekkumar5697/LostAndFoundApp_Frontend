@@ -4,7 +4,9 @@ import axios from "axios";
 import { FaTag, FaPen, FaImages } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom"; 
 const CreateItem = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -43,7 +45,7 @@ const CreateItem = () => {
         image: null,
       });
       toast.success("Post created successfully!");
-     
+      navigate("/");
       
     },
     onError: () => {

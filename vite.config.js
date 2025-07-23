@@ -7,6 +7,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),tailwindcss(),daisyui],
   server: {
-    port: 3001,
+    port: 3002,
   },
 })
