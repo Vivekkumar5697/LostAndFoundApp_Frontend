@@ -1,12 +1,88 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+```markdown
+# 🎒 Lost and Found App - Frontend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is the **frontend** of the Lost and Found platform built with **React**, **Tailwind CSS**, **DaisyUI**, and **React Query**. It allows users to report lost or found items, view posts, and contact the item owner.
 
-## Expanding the ESLint configuration
+🔗 **Live Demo**: [lost-and-found-app-frontend.vercel.app](https://lost-and-found-app-frontend.vercel.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- React
+- Tailwind CSS
+- DaisyUI
+- React Router DOM
+- React Query
+- Axios
+
+---
+
+## ✨ Features
+
+- 🔐 User Authentication (Signup/Login)
+- 🏠 Home Page with Lost & Found Posts
+- 📄 Create Post (Lost or Found Item)
+- 👤 Dashboard (Profile + Your Posts)
+- ✏️ Edit or Delete Posts
+- 📬 Contact Owner via Email
+- 📱 Responsive UI with DaisyUI components
+
+---
+
+## 📁 Folder Structure
+
+```
+
+src/
+├── components/       # Reusable UI components (Navbar, Cards, etc.)
+├── pages/            # Main pages (Home, Login, Signup, Dashboard)
+├── hooks/            # Custom hooks for API queries
+├── utils/            # Axios instance and helper functions
+├── App.jsx
+└── main.jsx
+
+````
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/LostAndFoundApp_Frontend.git
+cd LostAndFoundApp_Frontend
+````
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Create `.env` File
+
+```env
+VITE_API_BASE_URL=https://lostandfoundapp-backend.onrender.com//api
+```
+
+### 4. Run the App
+
+```bash
+npm run dev
+```
+
+---
+
+
+
+## 🙋‍♂️ Contact
+
+For queries or feedback, feel free to connect via [LinkedIn](https://www.linkedin.com/in/vivekvodnala/).
+
+---
+
+```
