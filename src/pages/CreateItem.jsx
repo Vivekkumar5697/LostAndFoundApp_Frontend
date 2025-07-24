@@ -3,7 +3,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { FaTag, FaPen, FaImages } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import toast from "react-hot-toast";
+import {toast} from "react-hot-toast";
 import { useNavigate } from "react-router-dom"; 
 const CreateItem = () => {
   const navigate = useNavigate();
