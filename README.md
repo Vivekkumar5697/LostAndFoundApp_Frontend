@@ -79,8 +79,3 @@ npm run dev
 
 For queries or feedback, feel free to connect via [LinkedIn](https://www.linkedin.com/in/vivekvodnala/).
 
-```
-
----
-
-```
