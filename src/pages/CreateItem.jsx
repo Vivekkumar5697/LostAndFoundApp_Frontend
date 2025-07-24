@@ -131,20 +131,22 @@ const CreateItem = () => {
 </div>
 
 
-          {/* Image */}
-          <div className="space-y-2">
-            <label className="flex items-center gap-2 text-sm font-medium text-[#800000] dark:text-yellow-400">
-              <FaImages /> Upload Image
-            </label>
-            <input
-              type="file"
-              name="image"
-              accept="image/*"
-              onChange={(e) => setFormData((prev) => ({ ...prev, image: e.target.files[0] }))}
-              className="file-input w-full bg-gray-100 dark:bg-slate-700 text-black dark:text-white rounded-xl  px-4 py-3  focus:outline-none focus:ring-2 focus:ring-[#800000] dark:focus:ring-yellow-400 transition"
-              required
-            />
-          </div>
+      <input
+  type="file"
+  name="image"
+  accept="image/*"
+  onChange={(e) => {
+    const file = e.target.files[0];
+    if (file && file.type.startsWith("image/")) {
+      setFormData((prev) => ({ ...prev, image: file }));
+    } else {
+      toast.error("Only image files are allowed (JPG, PNG, etc.)");
+      e.target.value = ""; // reset the file input
+    }
+  }}
+  className="file-input w-full bg-gray-100 dark:bg-slate-700 text-black dark:text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#800000] dark:focus:ring-yellow-400 transition"
+  required
+/>
 
           {/* Submit Button */}
           <button

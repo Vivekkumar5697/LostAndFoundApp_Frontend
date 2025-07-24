@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaLock, FaPhone, FaImage } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -16,15 +17,23 @@ const Signup = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
-    if (e.target.name === "profilePic") {
-      const file = e.target.files[0];
+const handleChange = (e) => {
+  if (e.target.name === "profilePic") {
+    const file = e.target.files[0];
+
+    // ✅ Strict check: only allow image files
+    if (file && file.type.startsWith("image/")) {
       setFormData({ ...formData, profilePic: file });
       setPreview(URL.createObjectURL(file));
     } else {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
+    toast.error("Only image files are allowed (JPG, PNG, etc.)");
+      e.target.value = ""; // reset the file input
     }
-  };
+  } else {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  }
+};
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
