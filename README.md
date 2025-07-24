@@ -34,7 +34,7 @@ This is the **frontend** of the Lost and Found platform built with **React**, **
 
 ## 📁 Folder Structure
 
-```
+````
 
 src/
 ├── components/       # Reusable UI components (Navbar, Cards, etc.)
