@@ -34,8 +34,7 @@ This is the **frontend** of the Lost and Found platform built with **React**, **
 
 ## 📁 Folder Structure
 
-````
-
+```
 src/
 ├── components/       # Reusable UI components (Navbar, Cards, etc.)
 ├── pages/            # Main pages (Home, Login, Signup, Dashboard)
@@ -44,7 +43,7 @@ src/
 ├── App.jsx
 └── main.jsx
 
-````
+```
 
 ---
 
@@ -55,7 +54,7 @@ src/
 ```bash
 git clone https://github.com/your-username/LostAndFoundApp_Frontend.git
 cd LostAndFoundApp_Frontend
-````
+```
 
 ### 2. Install Dependencies
 
